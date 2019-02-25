@@ -3,7 +3,7 @@
 //
 module.exports = function (controller) {
 
-    controller.hears([/^hi$/], ['message_received'], function (bot, message) {
+    controller.hears([/^hi$/], 'direct_message,direct_mention', function (bot, message) {
 
         // do something to respond to message
         bot.reply(message, 'Oh hai!');
